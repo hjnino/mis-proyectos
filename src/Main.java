@@ -357,29 +357,105 @@ public class Main {
                         edad = scanner.nextInt();
 
                         if (edad < 0){
-                            System.out.println("    Edad no validad ");
+                            System.out.println("      * Edad no validad");
+                            System.out.println("                                                                        ");
                         } else if (edad >= 0  && edad <= 5) {
-                            System.out.println("    Primera infancia");
+                            System.out.println("      * Primera infancia");
+                            System.out.println("                                                                        ");
                         } else if (edad >= 6 && edad <= 11) {
-                            System.out.println("    Infancia");
+                            System.out.println("      * Infancia");
+                            System.out.println("                                                                        ");
                         } else if (edad >= 12 && edad <= 18) {
-                            System.out.println("    Adolecencia");
+                            System.out.println("      * Adolecencia");
+                            System.out.println("                                                                        ");
                         } else if (edad >= 19 && edad <= 26) {
-                            System.out.println("    Juventud");
+                            System.out.println("      * Juventud");
+                            System.out.println("                                                                        ");
                         } else if (edad >= 27 && edad <= 59) {
-                            System.out.println("    Adultez");
+                            System.out.println("      * Adultez");
+                            System.out.println("                                                                        ");
                         } else
-                            System.out.println("    Vejez");
+                            System.out.println("      * Vejez");
+                            System.out.println("                                                                        ");
 
                     }else
                         System.out.println("Número no válido, por favor verifique.");
+                        System.out.println("                                                                        ");
                     break;
 
                 case 6:
+
+                    int menusw;
                     System.out.println("-------------------------------------------------------------------------------");
                     System.out.println("-                             CONDICIONAL SWITCH                              -");
                     System.out.println("-------------------------------------------------------------------------------");
-                    break;
+                    System.out.println("-         1.	Switch.                                                       -");
+                    System.out.println("-         2.	Programa                                                      -");
+                    System.out.println("-------------------------------------------------------------------------------");
+                    System.out.print("Digite su opción: ");
+
+                    menusw = menuscanner.nextInt();
+
+                    if (menusw == 1) {
+                        System.out.println("-------------------------------------------------------------------------------");
+                        System.out.println("-                                 SWITCH                                      -");
+                        System.out.println("-------------------------------------------------------------------------------");
+                        System.out.println("-  El condicional switch case es una estructura que evalúa más de un caso     -");
+                        System.out.println("-  y se caracteriza por:                                                      -");
+                        System.out.println("-																			  -");
+                        System.out.println("-    * Selección de una opción entre varias.                                  -");
+                        System.out.println("-    * Switch recibe un “caso” y lo evalúa hasta encontrar el caso que        -");
+                        System.out.println("-      corresponda.                                                           -");
+                        System.out.println("-    * Se puede usar la opción “default” para cuando no se encuentra el       -");
+                        System.out.println("-      caso dado.                                                             -");
+                        System.out.println("-																			  -");
+                        System.out.println("-  Este condicional es útil a la hora de definir por ejemplo un menú de       -");
+                        System.out.println("-  usuario en aplicaciones que se ejecutan por consola.                       -");
+                        System.out.println("-                                                                             -");
+                        System.out.println("-------------------------------------------------------------------------------");
+                    } else if (menusw == 2) {
+                        System.out.println("-------------------------------------------------------------------------------");
+                        System.out.println("-                                 PROGRAMA                                    -");
+                        System.out.println("-------------------------------------------------------------------------------");
+                        System.out.println("-    Programa que de acuerdo con la calificación numérica ingresada indica    -");
+                        System.out.println("-    en que categoría se encuentra la nota entre el rango del 1 al 10.        -");
+                        System.out.println("-                                                                             -");
+
+
+                        Scanner scanner = new Scanner(System.in);
+                        System.out.print ("             Ingrese el numero de su calificación:");
+                        int calificacion = scanner.nextInt();
+
+                        switch (calificacion) {
+                           case 1:
+                           case 2:
+                               System.out.println("    * Su calificacion es F");
+                               break;
+                           case 3:
+                           case 4:
+                               System.out.println("    * Su calificacion es D");
+                               break;
+                           case 5:
+                           case 6:
+                               System.out.println("    * Su calificacion es C");
+                               break;
+                           case 7:
+                           case 8:
+                               System.out.println("    * Su calificacion es B");
+                               break;
+                           case 9:
+                           case 10:
+                               System.out.println("    * Su calificacion es A");
+                               break;
+                           default:
+                               System.out.println("Número no válido, por favor verifique.");
+                        }
+
+                    } else
+                        System.out.println("Número no válido, por favor verifique.");
+                        System.out.println("                                                                        ");
+                        break;
+
                 case 7:
                     System.out.println("-------------------------------------------------------------------------------");
                     System.out.println("-                            CONDICIONAL TERNARIA                             -");
